@@ -1,0 +1,143 @@
+🌟 Web Application Full Feature Specification (Netlify Deployment)
+1️⃣ Landing Page — Keyword Generator
+✅ Word/Category Input:
+
+A text box where the user can enter any word or category they want to generate related keywords for.
+
+Example: nature, technology, abstract.
+
+✅ Keyword Count Input:
+
+A numeric input box where users can specify how many keywords to generate.
+
+Default value = 50.
+
+User can adjust the number (e.g. 10, 25, 100), but must be a valid positive integer.
+
+✅ API Buttons:
+
+"Generate with Gemini" button → Calls Gemini API to generate the requested number of unique, category-related keywords.
+
+"Generate with OpenRouter" button → Calls OpenRouter API using the selected model to generate the requested number of unique keywords.
+
+✅ Keyword Rules:
+
+The system ensures all generated keywords are:
+
+Unique — no repeats or overly similar keywords.
+
+Related to the entered word/category.
+
+✅ Keyword Progress Display:
+
+Shows a live counter:
+
+Example: Keywords generated: 0 / 50 → Updates as keywords are generated.
+
+2️⃣ API Settings — OpenRouter Configuration
+✅ Settings Button:
+
+Opens a settings panel where users can:
+
+Enter and save their OpenRouter API key.
+
+Click "Fetch Models" to pull the latest available models from OpenRouter (live).
+
+View list of models and select the preferred model.
+
+Click "Confirm Model" to set their chosen model for future OpenRouter calls.
+
+3️⃣ Copy & Step Transition — From Keywords to Prompts
+✅ Copy Keywords Button:
+
+Copies all generated keywords to clipboard.
+
+Automatically transitions the user to the Prompt Generator (Step 2) page.
+
+Pre-fills the prompt input box with copied keywords (1 keyword per line).
+
+✅ Manual Input Fallback:
+
+If no keywords copied, users can manually paste or enter their own list of keywords.
+
+4️⃣ Prompt Generator — Type & Count
+✅ Prompt Type Selection:
+
+Two buttons:
+
+Photography → Prompts will be structured for photo generation.
+
+Vector → Prompts will be structured for vector art generation.
+
+✅ Prompt Count Input:
+
+A numeric input box for how many prompts to generate.
+
+Default value = 50.
+
+Users can set this to match their keyword count or any positive integer.
+
+✅ Prompt Input Box:
+
+Pre-filled with copied keywords after Copy Keywords button.
+
+Allows manual typing or pasting of keywords if no copy was made.
+
+✅ Prompt Rules:
+
+Each keyword generates exactly one unique prompt.
+
+No similar or duplicate prompts — each is distinct.
+
+Each prompt ends with a period.
+
+Each prompt starts on a new line — no extra spaces, symbols, or headings.
+
+Output looks like:
+
+css
+Copy
+Edit
+A detailed macro photo of a sunflower field during golden hour.
+A crisp vector illustration of a futuristic city skyline.
+✅ Prompt Progress Display:
+
+Shows live counter:
+
+Example: Prompts generated: 0 / 50 → Updates as prompts are created.
+
+5️⃣ Final Copy & Cleanup
+✅ Copy Prompts Button:
+
+Copies all generated prompts to clipboard in clean format.
+
+After copy, all prompt data is cleared/reset, ready for the next task.
+
+🛠 Tech Notes & Requirements
+✅ Hosting: Netlify (Free Tier)
+✅ APIs:
+
+Gemini API for keyword generation
+
+OpenRouter API for keyword generation (with live model selection)
+✅ UI Features:
+
+Input fields for custom keyword + prompt count (default 50)
+
+Live progress counters for both keywords and prompts
+
+Two-step workflow:
+
+Step 1: Generate + copy keywords
+
+Step 2: Generate + copy prompts
+
+👉 If you want, I can now:
+
+Draft the HTML + JS code structure
+
+Design a wireframe mockup
+
+Plan API request/response handling logic
+
+Just tell me what you want next! 🚀
